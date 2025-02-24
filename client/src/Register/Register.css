@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.register-background {
+    background: linear-gradient(135deg, #5f7cff, #d47bfe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container {
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: 5vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.register-container h2 {
+    font-family: 'Share Tech Mono', monospace;
+    margin-bottom: 20px;
+}
+
+.register-container p {
+    font-family: 'Share Tech Mono', monospace;
+    margin-bottom: 30px;
+}
+
+.form-control:focus {
+    border-color: #4caf50;
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    color: #ffffff;
+}
+
+.form-control {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    width: 80%;
+    margin-bottom: 20px;
+    color: #cac7c7;
+    padding: 10px 20px;
+    padding-left: 50px; /* Adjust left padding for text */
+    border-radius: 30px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group .form-control {
+    border-radius: 30px;
+    padding-left: 50px; /* Adjust left padding for icon */
+}
+
+.input-group .input-group-text {
+    position: absolute;
+    left: 20px; /* Adjust horizontal position */
+    top: 30%; /* Vertically center */
+    transform: translateY(-50%); /* Precisely center vertically */
+    background: none;
+    border: none;
+    pointer-events: none;
+    padding: 0;
+}
+
+.input-group .input-icon {
+    position: absolute;
+    left: 10px; /* Adjust horizontal position */
+    transform: translateY(-50%); /* Precisely center vertically */
+    pointer-events: none;
+}
+
+.form-control:hover {
+    opacity: 0.8;
+}
+
+.btn-success {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #4caf50;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.btn-success:hover {
+    opacity: 0.8;
+}
+
+.form-control::placeholder {
+    color: #f1f2f7ba;
+    font-size: 15px;
+}
+
+.signin-link {
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.signin-link a {
+    font-family: 'Share Tech Mono', monospace;
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.PhoneInputInput {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none !important;
+    outline: none;
+    padding: 5px 1px;
+    border-radius: 30px;
+    color: #ffffff;
+    width: 98%;
+    height: 30px;
+
+}
+
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .register-container {
+        margin-top: 20vh; /* Adjust margin-top for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .register-container {
+        margin-top: 20vh; /* Further adjust margin-top for mobile screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+        max-width: 100%; /* Allow full width on smaller devices */
+    }
+}

@@ -1,0 +1,98 @@
+.stream-container {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+  }
+  
+  .stream-iframe {
+    flex: 3;
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+  .video-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  .comments-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    max-height: 900px; /* Set a maximum height for the comment section */
+    overflow-y: auto; /* Enable vertical scroll */
+  }
+  
+  .comments-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
+    border-top: 1px solid #ccc;
+    word-wrap: break-word; /* Ensures long words break and do not overflow */
+    white-space: pre-wrap; /* Ensures long lines wrap to the next line */
+  }
+  
+  .comment {
+    padding: 6px;
+    background-color: #ffffffb4;
+    border-radius: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word; /* Ensures long words break and do not overflow */
+    white-space: pre-wrap; /* Ensures long lines wrap to the next line */
+    width: 100%; /* Ensure comment takes the full width */
+    box-sizing: border-box;
+    max-height: 150px; /* Set a maximum height for individual comments */
+    overflow-y: auto; /* Enable vertical scroll for individual comments */
+  }
+  
+  .comment-input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #f1f1f1;
+    border-top: 1px solid #ddd;
+  }
+  
+  textarea {
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: black;
+    resize: none; /* Prevent resizing to ensure consistent layout */
+    overflow-y: auto; /* Allow scrolling for long text */
+  }
+  
+  .send-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .emoji-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .send-button svg {
+    stroke: white;
+  }
+  
+  .send-button:hover {
+    background-color: #0b7df6;
+  }

@@ -1,0 +1,153 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-out;
+  z-index: 1000;
+  text-transform: uppercase;
+  background-color: #000;
+}
+
+.tfc-image {
+  width: 70%; /* Ajuste la largeur à 100% de son conteneur parent */
+  max-width: 300px; /* Définit une largeur maximale */
+  height: auto; /* Garde les proportions de l'image */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 3rem;
+  margin-right: 5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  position: relative;
+}
+
+.navbar-links a:hover {
+  color: #fa4040;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Ensure menu toggle button appears on smaller screens */
+  }
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    padding: 1rem 0;
+    margin-right: auto;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(80vh - 60px); /* Adjust the max-height to fit your needs */
+    gap: 10px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+
+  .navbar-links.open {
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+  .menu-toggle:active,
+  .menu-toggle:focus {
+    outline: none; /* Removes the default outline */
+    border: none; /* Removes border on click */
+  }
+
+  .menu-toggle:hover {
+    background-color: rgb(237, 57, 57); /* Example hover effect */
+    /* Add any other styles you want to apply on hover */
+  }
+
+  .navbar-links a {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
